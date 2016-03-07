@@ -274,9 +274,9 @@ public class CharacterController2D : MonoBehaviour
 
 	public void CollectLife(){
 		PlaySound (coinSFX);
-
-		if (GameManager.gm)
-			GameManager.gm.AddLife ();
+		if (GameManager.gm) {
+			GameManager.gm.AddLife();
+		}
 	}
 
 	// public function on victory over the level

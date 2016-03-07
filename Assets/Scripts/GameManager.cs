@@ -144,6 +144,13 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
+	public void AddLife(){
+		lives ++;
+		PlayerPrefManager.SetLives (lives);
+		refreshGUI ();
+		refreshPlayerState ();
+	}
+
 	// public function to remove player life and reset game accordingly
 	public void ResetGame() {
 		// remove life and update GUI
@@ -176,8 +183,5 @@ public class GameManager : MonoBehaviour {
 		Application.LoadLevel (levelAfterVictory);
 	}
 
-	public void AddLife(){
-		
-	}
 }
 
