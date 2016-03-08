@@ -97,7 +97,9 @@ public class MainMenuManager : MonoBehaviour {
 			case RuntimePlatform.WindowsPlayer:
 			case RuntimePlatform.OSXPlayer:
 			case RuntimePlatform.LinuxPlayer:
-				QuitButton.SetActive(true);
+            case RuntimePlatform.Android:
+            case RuntimePlatform.IPhonePlayer:
+                QuitButton.SetActive(true);
 				break;
 
 			// platforms that should not have quit button
@@ -105,7 +107,6 @@ public class MainMenuManager : MonoBehaviour {
 			// default will cover all of these. 
 			case RuntimePlatform.WindowsEditor:
 			case RuntimePlatform.OSXEditor:
-			case RuntimePlatform.IPhonePlayer:
 			case RuntimePlatform.OSXWebPlayer:
 			case RuntimePlatform.WindowsWebPlayer:
 			case RuntimePlatform.WebGLPlayer: 
